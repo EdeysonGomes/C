@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('d6/dac/1_8c.html','../../'); initResiz
 </div><!--header-->
 <div class="contents">
 
-<p>Program to return indices of the two numbers such that they add up to target.  
+<p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -105,7 +105,17 @@ Functions</h2></td></tr>
 <tr class="separator:a4c66f634022b278e30e1501940cd69e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Program to return indices of the two numbers such that they add up to target. </p>
+<div class="textblock"><p >Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">nums</td><td>array of integers to be searched. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nums_size</td><td>nums array size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>target num. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">return_size</td><td>size of returned array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a pointer to the resulting array with the indices of the two numbers such that they add up to target. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a4c66f634022b278e30e1501940cd69e3" name="a4c66f634022b278e30e1501940cd69e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c66f634022b278e30e1501940cd69e3">&#9670;&nbsp;</a></span>twoSum()</h2>
@@ -144,20 +154,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>                                                                    {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordtype">int</span> i, j;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">int</span> *ret = <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(2, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nums_size; i++)    {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keywordflow">for</span> (j = i + 1; j &lt; nums_size; j++)</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>            <span class="keywordflow">if</span> (nums[i] + nums[j] == target) {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                ret[0] = i;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                ret[1] = j;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            }</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    *return_size = 2;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">return</span> ret;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="fragment"><div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                                                                    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">int</span> *ret = <a class="code hl_define" href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a>(2, <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordflow">for</span> (i = 0; i &lt; nums_size; i++)    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">for</span> (j = i + 1; j &lt; nums_size; j++)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">if</span> (nums[i] + nums[j] == target) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                ret[0] = i;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                ret[1] = j;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    }</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    *return_size = 2;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
 <div class="ttc" id="amalloc__dbg_8h_html_afdddaa949a93c1ef559a638e98f9c21b"><div class="ttname"><a href="../../d2/ddd/malloc__dbg_8h.html#afdddaa949a93c1ef559a638e98f9c21b">calloc</a></div><div class="ttdeci">#define calloc(elemCount, elemSize)</div><div class="ttdoc">This macro replace the standard calloc function with calloc_dbg.</div><div class="ttdef"><b>Definition:</b> malloc_dbg.h:22</div></div>
 </div><!-- fragment -->
 </div>
